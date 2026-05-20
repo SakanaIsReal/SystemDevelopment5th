@@ -1,7 +1,8 @@
 """Debug script to see what actually happens in the test."""
 
 import sys
-sys.path.insert(0, 'src')
+
+sys.path.insert(0, "src")
 
 from calculator.calculator import Calculator
 

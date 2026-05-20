@@ -115,7 +115,10 @@ class TestAddition:
         b = 10
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.add(a, b)
 
     def test_add_lower_limit_a(self):
@@ -126,7 +129,10 @@ class TestAddition:
         b = 10
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.add(a, b)
 
     def test_add_upper_limit_b(self):
@@ -137,7 +143,10 @@ class TestAddition:
         b = 10000000000000
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.add(a, b)
 
     def test_add_lower_limit_b(self):
@@ -148,7 +157,10 @@ class TestAddition:
         b = -10000000000000
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.add(a, b)
 
     def test_add_exact_min_value_raises(self):
@@ -159,7 +171,10 @@ class TestAddition:
         b = 0
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value -1000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value -1000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.add(a, b)
 
     def test_add_exact_max_value_raises(self):
@@ -170,7 +185,10 @@ class TestAddition:
         b = 0
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value 1000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value 1000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.add(a, b)
 
 
@@ -283,7 +301,10 @@ class TestSubtraction:
         b = 10
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.subtract(a, b)
 
     def test_subtract_lower_limit_a(self):
@@ -294,7 +315,10 @@ class TestSubtraction:
         b = 10
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.subtract(a, b)
 
     def test_subtract_upper_limit_b(self):
@@ -305,7 +329,10 @@ class TestSubtraction:
         b = 10000000000000
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.subtract(a, b)
 
     def test_subtract_lower_limit_b(self):
@@ -316,7 +343,10 @@ class TestSubtraction:
         b = -10000000000000
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.subtract(a, b)
 
 
@@ -401,7 +431,10 @@ class TestMultiplication:
         b = 10
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.multiply(a, b)
 
     def test_multiply_lower_limit_a(self):
@@ -412,7 +445,10 @@ class TestMultiplication:
         b = 10
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.multiply(a, b)
 
     def test_multiply_upper_limit_b(self):
@@ -423,7 +459,10 @@ class TestMultiplication:
         b = 10000000000000
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.multiply(a, b)
 
     def test_multiply_lower_limit_b(self):
@@ -434,7 +473,10 @@ class TestMultiplication:
         b = -10000000000000
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.multiply(a, b)
 
 
@@ -530,7 +572,10 @@ class TestDivision:
         b = 10
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.divide(a, b)
 
     def test_divide_lower_limit_a(self):
@@ -541,7 +586,10 @@ class TestDivision:
         b = 10
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.divide(a, b)
 
     def test_divide_upper_limit_b(self):
@@ -552,7 +600,10 @@ class TestDivision:
         b = 10000000000000
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value 10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.divide(a, b)
 
     def test_divide_lower_limit_b(self):
@@ -563,7 +614,10 @@ class TestDivision:
         b = -10000000000000
 
         # Act & Assert
-        with pytest.raises(InvalidInputException, match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]"):
+        with pytest.raises(
+            InvalidInputException,
+            match=r"Input value -10000000000000 is outside the valid range\[-1000000, 1000000\]",
+        ):
             calc.divide(a, b)
 
     def test_divide_by_one(self):
@@ -579,6 +633,3 @@ class TestDivision:
 
         # Assert
         assert result == pytest.approx(expected)
-
-
-

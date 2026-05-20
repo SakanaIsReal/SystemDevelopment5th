@@ -3,11 +3,8 @@ A simple calculator module with basic arithmetic operations.
 """
 
 
-
-
 class InvalidInputException(Exception):
     """Exception raised when input values are outside the valid range."""
-    
 
 
 class Calculator:
@@ -24,8 +21,6 @@ class Calculator:
                     f"[{self.MIN_VALUE}, {self.MAX_VALUE}]"
                 )
         pass
-
-
 
     def add(self, a, b):
         """Add two numbers.
@@ -93,8 +88,3 @@ class Calculator:
         if b == 0:
             raise ValueError("Cannot divide by zero")
         return a / b
-
-
-
-
-
